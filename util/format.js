@@ -1,15 +1,38 @@
 const path = require('path')
 
-module.exports.formatVideoPath = formatVideoPath
+module.exports.formatWritePath = formatWritePath
 
-function formatVideoPath(video_id) {
-    if(video_id) {
-      return path.join(__dirname, `../_video_cache/${video_id}.mp4`)
+function formatWritePath(id, ext) {
+    if(id) {
+      return path.join(__dirname, `../cache/video/${id}.${ext}`)
     }
     else {
       return null
     }
 }
+
+module.exports.formatRenderPath = formatRenderPath
+
+function formatRenderPath(id, ext) {
+  if(id) {
+    return path.join(__dirname, `../cache/render/${id}.${ext}`)
+  }
+  else {
+    return null
+  }
+}
+
+module.exports.formatTempPath = formatTempPath
+
+function formatTempPath(id, ext) {
+    if(id) {
+      return path.join(__dirname, `../cache/temp/${id}.${ext}`)
+    }
+    else {
+      return null
+    }
+}
+
 module.exports.nonce = nonce
 
 function nonce() {
