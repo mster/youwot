@@ -17,3 +17,8 @@ function log(path, error){
     console.log(`Completed! Video path: ${path}`)
 }
 ```
+
+## About
+YouWot leans on the power of [ffmpeg](), and more specifically [fluent-ffmpeg](), to carry out the rendering involved with stripping, and merging media. 
+
+The package may include additions features in later releases. 
