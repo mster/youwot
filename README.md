@@ -24,6 +24,6 @@ function log(path, error){
 ```
 
 ## About
-YouWot leans on the power of [ffmpeg](), and more specifically [fluent-ffmpeg](), to carry out the rendering involved with stripping, and merging media. 
+YouWot leans on the power of [ffmpeg](https://www.ffmpeg.org/) (required), and more specifically [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg), to carry out the rendering involved with stripping, and merging media. 
 
 The package may include additions features in later releases. 
