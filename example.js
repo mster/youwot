@@ -2,12 +2,14 @@
 
 const youwot = require('../youwot')
 
-var videoId = 'cwQgjq0mCdE'
+var yw = youwot.create()
+
+var videoId = 'Yy-hwVWAq_Q'
 var audioId = 'dP9Wp6QVbsk'
 
-youwot.replaceAudioFromVideo(videoId, audioId, log)
+yw.replaceAudioFromVideo(videoId, audioId, log)
 
 function log(path, err){
     if(err) return console.error(`An error happened: ${err}`)
-    console.log(`Completed! Video path: ${path}`)
+    console.log(`Task completed! New video path: ${path}`)
 }

@@ -2,19 +2,24 @@
 Node.js video editor built to combine the video and audio sources of two different YouTube videos. 
 
 ## Usage
-Import the package.
+Import the package, and initialize the editor. This will build the necessary directories i
 ```javascript
-const youwot = require('youwot')
+const youwot = require('../youwot')
+
+var yw = youwot.create()
 ```
 Then call the `replaceAudioFromVideo` function, which requires a valid video and audio id, as well as a callback function. 
 ```javascript
-youwot.replaceAudioFromVideo(videoId, audioId, log)
+var videoId = 'Yy-hwVWAq_Q'
+var audioId = 'dP9Wp6QVbsk'
+
+yw.replaceAudioFromVideo(videoId, audioId, log)
 ```
 A `path` variable, and `error` are passed to the callback. The `path` passed is the system path to the rendered file. The `error` value is `null` on successful edits. 
 ```javascript
 function log(path, error){
     if(error) return console.error(`An error happened: ${error}`)
-    console.log(`Completed! Video path: ${path}`)
+    console.log(`Task completed! New video path: ${path}`)
 }
 ```
 
