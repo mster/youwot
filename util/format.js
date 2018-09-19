@@ -4,7 +4,7 @@ module.exports.formatWritePath = formatWritePath
 
 function formatWritePath(id, ext) {
     if(id) {
-      return path.join(__dirname, `../cache/video/${id}.${ext}`)
+      return path.join(__dirname, `../youwot_cache/download/${id}.${ext}`)
     }
     else {
       return null
@@ -15,7 +15,7 @@ module.exports.formatRenderPath = formatRenderPath
 
 function formatRenderPath(id, ext) {
   if(id) {
-    return path.join(__dirname, `../cache/render/${id}.${ext}`)
+    return path.join(__dirname, `../youwot_cache/render/${id}.${ext}`)
   }
   else {
     return null
@@ -26,7 +26,7 @@ module.exports.formatTempPath = formatTempPath
 
 function formatTempPath(id, ext) {
     if(id) {
-      return path.join(__dirname, `../cache/temp/${id}.${ext}`)
+      return path.join(__dirname, `../youwot_cache/temp/${id}.${ext}`)
     }
     else {
       return null
